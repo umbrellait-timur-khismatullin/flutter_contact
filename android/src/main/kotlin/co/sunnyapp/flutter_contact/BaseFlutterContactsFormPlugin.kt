@@ -150,6 +150,12 @@ fun Contact.applyToIntent(mode: ContactMode, intent: Intent) {
 
     val inboundData = ArrayList<ContentValues>()
 
+    val value = ContentValues()
+    value.put(ContactsContract.RawContacts.Data.MIMETYPE, ContactsContract.CommonDataKinds.Photo.CONTENT_ITEM_TYPE)
+    value.put(ContactsContract.CommonDataKinds.Photo.PHOTO, avatar)
+
+    inboundData += value
+
     inboundData += contentValues(ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)
             .withValue(ContactsContract.CommonDataKinds.StructuredName.GIVEN_NAME, contact.givenName)
             .withValue(ContactsContract.CommonDataKinds.StructuredName.MIDDLE_NAME, contact.middleName)
