@@ -1,0 +1,15 @@
+name: dartxx
+version: 0.5.5
+description: Core utilities with minimal dependencies.
+repository: https://github.com/ericmartineau/dartxx.git
+environment: 
+  sdk: '>=2.16.0 <3.0.0'
+dependencies: 
+  equatable: ^2.0.3
+  inflection3: ^0.5.3+2
+  intl: ^0.18.0
+  recase: ^4.0.0
+dev_dependencies:
+  pedantic: ^1.11.1
+  test: ^1.21.1
+  test_api: ^0.4.9
